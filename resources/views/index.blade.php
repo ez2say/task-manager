@@ -3,5 +3,9 @@
 @section('title', 'Главная страница')
 
 @section('content')
-<h1>Главная страница</h1>
+    <div class="cards text-center car">
+        <div class="card-body">
+            Главааааная
+        </div>
+    </div>
 @endsection

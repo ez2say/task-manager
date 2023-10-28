@@ -32,17 +32,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('tasks.index')}}">Задачи</a>
                 </li>
-                    <li class="nav-item">
-                        <a class="nav-link fa fa-angle-down" href="{{ route('lk.show')}}">Личный кабинет</a>
+                    <li class="nav-item dropdown " style="justify-content:flex-end">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Личный кабинет
+                        </a>
+                        <ul class="dropdown-menu bg-dark-subtle bg-opacity-50">
+                            <li><a class="dropdown-item" href="{{ route('lk.show')}}">Личный кабинет</a></li>
+                            <li><form action="/logout" method="post">@csrf<button class="dropdown-item">Выход</button></form></li>
+                        </ul>
                     </li>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown button
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 @endguest
             </ul>
         </div>

@@ -83,6 +83,8 @@ class TaskController extends Controller
      */
     public function edit(string $id)
     {
+        $task = \App\Models\Task::with(['status', 'comments'])->find($id);
+        return view('tasks.edit', ['task'=>$task]);
         // Вывод формы редактирования задачи $id
         // 1. Получить данные задачи $task из БД
         // 2. Вывести вьюшку с формой с данными задачи

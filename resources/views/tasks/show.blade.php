@@ -10,7 +10,7 @@
                     <h5 class="card-title">{{$task->name}}({{$task->status->name}})</h5>
                     <p class="card-text">{{$task->preview}}</p>
                     <img src="{{asset($task->image)}}"/>
-                    <a href="#" class="btn btn-primary">Изменить задачу</a>
+                    <a href="{{route('tasks.edit',['task'=>$task->id])}}" class="btn btn-primary">Изменить задачу</a>
                 </div>
                 <div class="card-footer text-body-secondary">
                     Список работающих над задачей

@@ -10,8 +10,8 @@
     </h1>
     <div class="row">
         @foreach($tasks as $task)
-        <div class="col-3">
-            <div class="card mb-4">
+        <div class="col-3 ">
+            <div class="card mb-4 bg-secondary bg-gradient">
                 <img src="{{asset($task->image)}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$task->name}}({{$task->status->name}})</h5>
