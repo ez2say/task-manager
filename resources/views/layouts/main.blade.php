@@ -41,6 +41,9 @@
                             <li><form action="/logout" method="post">@csrf<button class="dropdown-item">Выход</button></form></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{route('tag')}}">Теги</a>
+                    </li>
                 @endguest
             </ul>
         </div>

@@ -44,6 +44,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('tasks', \App\Http\Controllers\TaskController::class);
     Route::post('/tasks/list', [\App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
 });
+    Route::resource('tag',\App\Http\Controllers\TagController::class);
+
+    Route::post('/tag', function (){
+
+    });
 
 
 Auth::routes();
